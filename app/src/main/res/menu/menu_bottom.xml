@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android">
+    <item
+        android:id="@+id/home"
+        android:icon="@drawable/ic_home_white_24dp"
+        android:title="Home" />
+    <item
+        android:id="@+id/news"
+        android:icon="@drawable/ic_chrome_reader_mode_black_24dp"
+        android:title="News" />
+    <item
+        android:id="@+id/events"
+        android:icon="@drawable/ic_chrome_reader_mode_black_24dp"
+        android:title="Events" />
+    <item
+        android:id="@+id/sport"
+        android:icon="@drawable/ic_public_black_24dp"
+        android:title="Sport" />
+
+
+</menu>
