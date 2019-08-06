@@ -16,8 +16,10 @@ import androidx.fragment.app.FragmentTransaction;
 import android.view.View;
 import android.view.Menu;
 import android.view.MenuItem;
+import android.widget.Toast;
 
 public class MainActivity extends AppCompatActivity {
+
     BottomNavigationView navigationView;
 
     @Override
@@ -31,22 +33,22 @@ public class MainActivity extends AppCompatActivity {
             @Override
             public boolean onNavigationItemSelected(@NonNull MenuItem menuItem) {
                 switch (menuItem.getItemId()) {
+                    case R.id.home:
+                        loadFragment(new HomeFragment());
+                        return true;
                     case R.id.events:
                         loadFragment(new EventsFragment());
                         return true;
                     case R.id.sport:
-                        loadFragment(new EventsFragment());
+
                         return true;
                     case R.id.news:
-                        loadFragment(new EventsFragment());
+                        loadFragment(new NewsFragment());
                         return true;
                 }
-
                 return false;
             }
         });
-
-
     }
 
     private void loadFragment(Fragment fragment) {
@@ -54,7 +56,6 @@ public class MainActivity extends AppCompatActivity {
         transaction.replace(R.id.frame_layout, fragment);
         transaction.addToBackStack(null);
         transaction.commit();
-
     }
 
     @Override
@@ -73,6 +74,7 @@ public class MainActivity extends AppCompatActivity {
 
         //noinspection SimplifiableIfStatement
         if (id == R.id.action_settings) {
+
             return true;
         }
 
